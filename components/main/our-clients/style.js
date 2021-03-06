@@ -2,20 +2,25 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   mainTitle: {
-    color: "#262626",
+    color: "black",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "38px",
+    fontSize: "32px",
     fontWeight: 800,
     lineHeight: "40px",
-    width: "70%"
+    width: "70%",
+    textAlign: "center"
+  },
+  container: {
+    backgroundImage: `url(./main/background.png)`,
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
   description: {
-    color: "rgba(2, 1, 1, 0.86)",
+    color: "black",
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "14px",
-    fontWeight: 400,
-    margin: "40px 0",
-    width: "55%",
+    margin: "15px 0",
     "@media (max-width: 900px)": {
       width: "100%"
     },
@@ -40,9 +45,8 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
   mainInfoContainer: {
-    display: "flex",
     "&.img": {
-      padding: "20px"
+      // padding: "20px"
     },
     "@media (max-width: 900px)": {
       justifyContent: "center"
