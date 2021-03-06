@@ -34,8 +34,8 @@ export default function MainOrder() {
             timeout={100}
             navButtonsAlwaysInvisible={true}
           >
-            <Image src="/main/main.png" width={600} height={435} alt="" loading="eager"/>
-            <Image src="/main/main2.png" width={600} height={435} alt="" loading="eager"/>
+            <Image src="/main/main.png" width={600} height={435} alt="" loading="eager" priority/>
+            <Image src="/main/main2.png" width={600} height={435} alt="" loading="eager" priority/>
           </Carousel>
         </Grid>
         <Grid container display="flex" width="100%" style={{ marginTop: "60px" }}>
@@ -49,6 +49,7 @@ export default function MainOrder() {
                       width={68}
                       height={68}
                       alt={alt}
+                      loading="eager"
                     />
                   </Box>
                   <Box className={classes.info}>

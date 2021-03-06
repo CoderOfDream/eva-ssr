@@ -32,7 +32,6 @@ export default function OurClients() {
                       width="300px"
                       height="300px"
                       alt=""
-                      loading="eager"
                     />
                   </Box>
                 </Box>

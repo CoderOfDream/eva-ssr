@@ -26,6 +26,7 @@ export default function KeyQualities() {
                     width={230}
                     height={230}
                     alt={alt}
+                    loading="eager"
                   />
                 </Box>
                 <Box className={classes.info}>
