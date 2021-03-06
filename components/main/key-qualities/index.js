@@ -36,7 +36,7 @@ export default function KeyQualities() {
             </Grid>)
         }
       </Grid>
-      <Grid container spacing={3} style={{margin: "20px 0 100px 0"}}>
+      <Grid container spacing={3}>
         <Grid item xs={12} sm={5} display="flex" justifyContent="center">
           <Image
             src="/main/mesh.jpg"
