@@ -15,10 +15,10 @@ export default function KeyQualities() {
       <Typography component="h2" className={classes.mainTitle}>
         Key qualities
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} justify="center">
         {
           cards.map(({ src, alt, topText, bottomText }, i) =>
-            <Grid item xs={12} sm={4} display="flex" justifyContent="center" key={i}>
+            <Grid item xs={12} sm={4} display="flex" key={i}>
               <Box className={classes.mainInfoContainer} xs={12}>
                 <Box className={classes.image}>
                   <Image
@@ -37,7 +37,7 @@ export default function KeyQualities() {
         }
       </Grid>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={5} display="flex" justifyContent="center">
+        <Grid container item xs={12} sm={5} display="flex" justify="center">
           <Image
             src="/main/mesh.jpg"
             width={408}

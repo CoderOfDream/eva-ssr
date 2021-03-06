@@ -14,6 +14,7 @@ import Image from 'next/image'
 import Container from "@material-ui/core/Container";
 import { useRouter } from 'next/router'
 import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 
 export default function Header() {
   const { header, menuButton, toolbar, drawerContainer } = useStyles();
@@ -67,7 +68,7 @@ export default function Header() {
     return (
       <Toolbar className={toolbar}>
         {headerLogo}
-        <Box display="flex" alignItems="center" justifyContent="center" height="100%">{getMenuButtons()}</Box>
+        <Box container display="flex" alignItems="center" justify="center" height="100%">{getMenuButtons()}</Box>
       </Toolbar>
     );
   };
@@ -96,7 +97,7 @@ export default function Header() {
         </IconButton>
         <Drawer
           {...{
-            anchor: "left",
+            anchor: "top",
             open: drawerOpen,
             onClose: handleDrawerClose
           }}
@@ -110,12 +111,14 @@ export default function Header() {
   const getDrawerChoices = (handleDrawerClose) => {
     return headersData.map(({ label, href }) => {
       return (
-        <Button key={label} onClick={() => {
-          handleDrawerClose();
-          router.push(href)
-        }}>
-          <MenuItem>{label}</MenuItem>
-        </Button>
+        <Grid container display="flex" justify="center">
+          <Button key={label} onClick={() => {
+            handleDrawerClose();
+            router.push(href)
+          }}>
+            <MenuItem>{label}</MenuItem>
+          </Button>
+        </Grid>
       );
     });
   };
@@ -125,13 +128,19 @@ export default function Header() {
   );
 
   useEffect(() => {
-    setHeadersData(headersData.map(it => it.href === router.pathname ? ({...it, isActive: true}) : ({...it, isActive: false})));
+    setHeadersData(headersData.map(it => it.href === router.pathname ? ({ ...it, isActive: true }) : ({
+      ...it,
+      isActive: false
+    })));
   }, [router.pathname])
 
   const getMenuButtons = () => {
     const clickDesktopButton = (label, href) => {
       router.push(href);
-      setHeadersData(headersData.map(it => it.label === label ? ({...it, isActive: true}) : ({...it, isActive: false})));
+      setHeadersData(headersData.map(it => it.label === label ? ({ ...it, isActive: true }) : ({
+        ...it,
+        isActive: false
+      })));
     }
     return headersData.map(({ label, href, isActive }) => (
       <Button

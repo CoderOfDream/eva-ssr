@@ -13,7 +13,7 @@ export default function OurClients() {
   return (
     <section className={classes.container}>
       <Container maxWidth="lg">
-        <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center">
+        <Box display="flex" justify="center" flexDirection="column" alignItems="center">
           <Typography component="h2" className={classes.mainTitle}>
             Out Clients
           </Typography>
@@ -24,7 +24,7 @@ export default function OurClients() {
         <Grid container spacing={3}>
           {
             cards.map(({ src }, i) =>
-              <Grid item xs={12} sm={3} display="flex" justifyContent="center" key={i}>
+              <Grid container item xs={12} sm={3} display="flex" justify="center" key={i}>
                 <Box className={classes.mainInfoContainer} xs={12} display="flex">
                   <Box className={classes.image}>
                     <Image
@@ -32,6 +32,7 @@ export default function OurClients() {
                       width="300px"
                       height="300px"
                       alt=""
+                      loading="eager"
                     />
                   </Box>
                 </Box>

@@ -16,7 +16,7 @@ export default function MainOrder() {
     <Container maxWidth="lg">
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
-          <Box display="flex" alignItems="between" justifyContent="space-around" flexDirection="column" height="100%">
+          <Box display="flex" alignItems="between" justify="space-around" flexDirection="column" height="100%">
             <Typography component="h1" className={classes.mainTitle}>
               Indywidualnie dopasowane dywaniki samochodowe EVA
             </Typography>
@@ -34,14 +34,14 @@ export default function MainOrder() {
             timeout={100}
             navButtonsAlwaysInvisible={true}
           >
-            <Image src="/main/main.png" width={600} height={435} alt=""/>
-            <Image src="/main/main2.png" width={600} height={435} alt=""/>
+            <Image src="/main/main.png" width={600} height={435} alt="" loading="eager"/>
+            <Image src="/main/main2.png" width={600} height={435} alt="" loading="eager"/>
           </Carousel>
         </Grid>
-        <Grid container display="flex" width="100%" justifyContent="center" style={{ marginTop: "60px" }}>
+        <Grid container display="flex" width="100%" style={{ marginTop: "60px" }}>
           {
             cards.map(({ src, alt, topText, bottomText }, i) =>
-              <Grid item xs={12} sm={4} display="flex" justifyContent="center" key={i}>
+              <Grid container item sm={4} display="flex" justify="center" key={i}>
                 <Box className={classes.mainInfoContainer} xs={12}>
                   <Box className={classes.image}>
                     <Image
