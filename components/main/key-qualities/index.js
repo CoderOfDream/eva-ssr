@@ -44,6 +44,7 @@ export default function KeyQualities() {
             width={408}
             height={306}
             alt="mesh"
+            loading="eager"
           />
         </Grid>
         <Grid item xs={12} sm={7}>
@@ -52,6 +53,7 @@ export default function KeyQualities() {
             width={70}
             height={70}
             alt="rombs"
+            loading="eager"
           />
           <Typography component="h2" className={classes.meshDescriptionTitle}>
             Unikalny kształt komórek wewnątrz dywaników
