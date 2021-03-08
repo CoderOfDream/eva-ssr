@@ -22,8 +22,8 @@ export default function Difference() {
             {
               cards.map(([regular, eva], i) => (
                 <>
-                  <Met key={i} text={regular.text} src={regular.src}/>
-                  <Met key={i} text={eva.text} src={eva.src}/>
+                  <Met key={regular.src} text={regular.text} src={regular.src}/>
+                  <Met key={eva.src} text={eva.text} src={eva.src}/>
                 </>
               ))
             }

@@ -19,8 +19,7 @@ export default function Comparison() {
           </Typography>
           <p>Move the slider</p>
         </Grid>
-        <Grid item sm={4}>
-          <ReactCompareImage leftImage="/main/compare/3.jpg" rightImage="/main/compare/4.jpg"/>;
+        <Grid item sm={4}><ReactCompareImage leftImage="/main/compare/3.jpg" rightImage="/main/compare/4.jpg"/>;
         </Grid>
       </Grid>
     </Container>

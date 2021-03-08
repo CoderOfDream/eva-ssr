@@ -31,7 +31,7 @@ export default function MainOrder() {
         <Grid item xs={12} sm={6}>
           <Carousel
             autoPlay={false}
-            timeout={100}
+            timeout={0}
             navButtonsAlwaysInvisible={true}
           >
             <Image src="/main/main.png" width={600} height={435} alt="" loading="eager" priority/>
