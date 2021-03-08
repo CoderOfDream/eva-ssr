@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
   mainTitle: {
     color: "#0C0C0C",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "34px",
+    fontSize: "28px",
     fontWeight: 800,
     margin: "50px 0"
   },

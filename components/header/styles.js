@@ -27,7 +27,8 @@ export const useStyles = makeStyles(() => ({
     },
     "&-active": {
       color: "#CE2B2B",
-      boxShadow: "0 5px 0px 0px #CE2B2B"
+      boxShadow: "0 5px 0px 0px #CE2B2B",
+      fontWeight: "bold"
     }
   },
   toolbar: {

@@ -37,32 +37,35 @@ export default function KeyQualities() {
             </Grid>)
         }
       </Grid>
-      <Grid container spacing={3}>
-        <Grid container item xs={12} sm={5} display="flex" justify="center">
-          <Image
-            src="/main/mesh.jpg"
-            width={408}
-            height={306}
-            alt="mesh"
-            loading="eager"
-          />
+      <div style={{margin: "70px 0 70px 0"}}>
+        <Grid container spacing={3}>
+          <Grid container item xs={12} sm={5} display="flex" justify="center">
+            <Image
+              src="/main/mesh.jpg"
+              width={408}
+              height={306}
+              alt="mesh"
+              loading="eager"
+            />
+          </Grid>
+          <Grid item xs={12} sm={7}>
+            <Image
+              src="/main/rombs.png"
+              width={70}
+              height={70}
+              alt="rombs"
+              loading="eager"
+            />
+            <Typography component="h2" className={classes.meshDescriptionTitle}>
+              Unikalny kształt komórek wewnątrz dywaników
+            </Typography>
+            <p>
+              Komórki o kształtach Rombu oraz Plastra Miodu umożliwiają bezpieczne utrzymywanie do 2 litrów płynów i
+              brudu
+            </p>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={7}>
-          <Image
-            src="/main/rombs.png"
-            width={70}
-            height={70}
-            alt="rombs"
-            loading="eager"
-          />
-          <Typography component="h2" className={classes.meshDescriptionTitle}>
-            Unikalny kształt komórek wewnątrz dywaników
-          </Typography>
-          <p>
-            Komórki o kształtach Rombu oraz Plastra Miodu umożliwiają bezpieczne utrzymywanie do 2 litrów płynów i brudu
-          </p>
-        </Grid>
-      </Grid>
+      </div>
     </Container>
   )
 }

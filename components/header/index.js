@@ -97,7 +97,7 @@ export default function Header() {
         </IconButton>
         <Drawer
           {...{
-            anchor: "top",
+            anchor: "right",
             open: drawerOpen,
             onClose: handleDrawerClose
           }}
@@ -124,7 +124,7 @@ export default function Header() {
   };
 
   const headerLogo = (
-    <Image src="/header/logo.png" width={127} height={44} alt="logo"/>
+    <Image src="/header/logo.png" width={127} height={44} alt="logo" priority loading="eager"/>
   );
 
   useEffect(() => {
