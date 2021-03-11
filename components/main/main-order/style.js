@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "14px",
     fontWeight: 400,
-    margin: "40px 0",
+    margin: "60px 0",
     width: "55%",
     "@media (max-width: 900px)": {
       width: "100%"
