@@ -10,7 +10,7 @@ export default function Comparison() {
   return (
     <Container maxWidth="lg" className={classes.container}>
       <Grid container className={classes.containerGrid}>
-        <Grid item sm={4}>
+        <Grid item sm={4} className={classes.hideCompare}>
           <ReactCompareImage leftImage="/main/compare/1.jpg" rightImage="/main/compare/2.jpg"/>;
         </Grid>
         <Grid item sm={4} className={classes.mainContainer}>

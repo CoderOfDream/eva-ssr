@@ -37,7 +37,7 @@ export default function KeyQualities() {
             </Grid>)
         }
       </Grid>
-      <div style={{margin: "70px 0 70px 0"}}>
+      <div style={{ margin: "70px 0 70px 0" }}>
         <Grid container spacing={3}>
           <Grid container item xs={12} sm={5} display="flex" justify="center">
             <Image
@@ -48,14 +48,16 @@ export default function KeyQualities() {
               loading="eager"
             />
           </Grid>
-          <Grid item xs={12} sm={7}>
-            <Image
-              src="/main/rombs.png"
-              width={70}
-              height={70}
-              alt="rombs"
-              loading="eager"
-            />
+          <Grid item xs={12} sm={7} className={classes.rombContainer}>
+            <Box className={classes.rombsImg}>
+              <Image
+                src="/main/rombs.png"
+                width={70}
+                height={70}
+                alt="rombs"
+                loading="eager"
+              />
+            </Box>
             <Typography component="h2" className={classes.meshDescriptionTitle}>
               Unikalny kształt komórek wewnątrz dywaników
             </Typography>

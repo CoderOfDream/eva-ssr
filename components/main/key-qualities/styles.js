@@ -6,7 +6,20 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "28px",
     fontWeight: 800,
-    margin: "50px 0"
+    margin: "50px 0",
+    "@media (max-width: 900px)": {
+      textAlign: "center"
+    }
+  },
+  rombContainer: {
+    "@media (max-width: 900px)": {
+      flexDirection: "column-reverse"
+    }
+  },
+  rombsImg: {
+    "@media (max-width: 900px)": {
+      display: "none"
+    }
   },
   meshDescriptionTitle: {
     fontWeight: "bold",

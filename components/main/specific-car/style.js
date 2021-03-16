@@ -1,6 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  section: {
+    marginTop: "100px",
+    "@media (max-width: 900px)": {
+      marginTop: 0
+    },
+  },
   mainTitle: {
     color: "black",
     fontFamily: "Montserrat, Sans-serif",
@@ -8,7 +14,11 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     lineHeight: "40px",
     width: "70%",
-    textAlign: "center"
+    textAlign: "center",
+    "@media (max-width: 900px)": {
+      width: "100%",
+      marginTop: 0
+    },
   },
   container: {
     backgroundImage: `url(./main/background.png)`,

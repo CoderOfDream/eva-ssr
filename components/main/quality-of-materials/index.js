@@ -36,8 +36,11 @@ export default function QualityOfMaterials() {
       </section>
       <Container maxWidth="lg">
         <Grid container spacing={3}>
-          <Grid container item xs={12} sm={4}>
-            <Image src="/main/car-mats.jpg" width={383} height={383} alt="Quality of Materials"/>
+          <Grid container item xs={12} sm={4} justify="center">
+            <Box>
+              <Image src="/main/car-mats.jpg" width={383} height={383} alt="Quality of Materials"
+                     style={{ margin: "0 auto" }}/>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={8}>
             <Box display="flex" alignItems="between" justify="space-around" flexDirection="column" height="100%">

@@ -89,7 +89,7 @@ export default function Header() {
             edge: "start",
             color: "inherit",
             "aria-label": "menu",
-            "aria-haspopup": "true",
+            "aria-haspёopup": "true",
             onClick: handleDrawerOpen
           }}
         >

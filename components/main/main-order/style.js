@@ -7,7 +7,11 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "38px",
     fontWeight: 800,
     lineHeight: "40px",
-    width: "70%"
+    width: "70%",
+    "@media (max-width: 900px)": {
+      textAlign: "center",
+      width: "100%",
+    },
   },
   description: {
     color: "rgba(2, 1, 1, 0.86)",
@@ -17,7 +21,8 @@ export const useStyles = makeStyles((theme) => ({
     margin: "60px 0",
     width: "55%",
     "@media (max-width: 900px)": {
-      width: "100%"
+      width: "100%",
+      textAlign: "center",
     },
   },
   chooseKitButton: {

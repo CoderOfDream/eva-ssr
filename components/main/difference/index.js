@@ -20,7 +20,7 @@ export default function Difference() {
         <Container maxWidth="lg">
           <Grid container spacing={3}>
             {
-              cards.map(([regular, eva], i) => (
+              cards.map(([regular, eva]) => (
                 <>
                   <Met key={regular.src} text={regular.text} src={regular.src}/>
                   <Met key={eva.src} text={eva.text} src={eva.src}/>

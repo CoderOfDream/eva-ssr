@@ -10,7 +10,10 @@ export const useStyles = makeStyles((theme) => ({
     textShadow: "0px 0px 0px rgb(0 0 0 / 30%)",
     display: "flex",
     justifyContent: "center",
-    textAlign: "center"
+    textAlign: "center",
+    "@media (max-width: 900px)": {
+      marginTop: 0
+    }
   },
   text: {
     margin: "0 auto"
@@ -39,6 +42,11 @@ export const useStyles = makeStyles((theme) => ({
     },
     "@media (max-width: 900px)": {
       justifyContent: "center"
+    }
+  },
+  hideCompare: {
+    "@media (max-width: 900px)": {
+      display: "none"
     }
   }
 }))
