@@ -13,7 +13,6 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "32px",
     fontWeight: 800,
     lineHeight: "40px",
-    width: "70%",
     textAlign: "center",
     "@media (max-width: 900px)": {
       width: "100%",

@@ -17,7 +17,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 
 export default function Header() {
-  const { header, menuButton, toolbar, drawerContainer } = useStyles();
+  const { header, menuButton, toolbar, drawerContainer, orderButton } = useStyles();
 
   const [state, setState] = useState({
     mobileView: false,
@@ -26,22 +26,22 @@ export default function Header() {
 
   const [headersData, setHeadersData] = useState([
     {
-      label: "Главная",
+      label: "Strona główna",
       href: "/",
       isActive: true
     },
     {
-      label: "Продукт",
+      label: "Produkt",
       href: "/product",
       isActive: false
     },
     {
-      label: "О нас",
+      label: "O nas",
       href: "/about-us",
       isActive: false
     },
     {
-      label: "Контакты",
+      label: "Kontakt",
       href: "/contact",
       isActive: false
     }
@@ -68,6 +68,7 @@ export default function Header() {
     return (
       <Toolbar className={toolbar}>
         {headerLogo}
+        <Button className={orderButton}>Złóż zamówienie</Button>
         <Box container display="flex" alignItems="center" justify="center" height="100%">{getMenuButtons()}</Box>
       </Toolbar>
     );
@@ -159,7 +160,7 @@ export default function Header() {
 
   return (
     <AppBar className={header}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         {mobileView ? displayMobile() : displayDesktop()}
       </Container>
     </AppBar>

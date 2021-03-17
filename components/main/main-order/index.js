@@ -2,9 +2,14 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import Carousel from "react-material-ui-carousel";
 import Image from "next/image";
+import FirstStep from "../../../public/main/first-step.gif";
+// import FirstStepActive from "../../../public/main/first-step-active.png";
+// import SecondStep from "../../../public/main/second-step.gif";
+import Home from '@material-ui/icons/Home';
+// import SecondStepActive from "../../../public/main/second-step-active.gif";
+import { Fade, Bounce, Slide } from "react-awesome-reveal";
 import React from "react";
 import { useStyles } from "./style";
 import { cards } from "./cards";
@@ -15,24 +20,34 @@ export default function MainOrder() {
 
   return (
     <main className={classes.main}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Grid container spacing={3}>
-          <Grid item container xs={12} sm={6} alignItems="center">
+          <Grid item container xs={12} sm={5} alignItems="center">
             <Grid display="flex" alignItems="between" flexDirection="column" height="100%">
-              <Typography component="h1" className={classes.mainTitle}>
-                Indywidualnie dopasowane dywaniki samochodowe EVA
-              </Typography>
+              <Slide duration={1300} >
+                <Typography component="h1" className={classes.mainTitle}>
+                  Indywidualnie dopasowane dywaniki samochodowe EVA
+                </Typography>
+              </Slide>
               <Typography component="p" className={classes.description}>
-                For those who value in-car cleanliness, functionality and authentic design
+                Dla tych, którzy cenią sobie czystość w samochodzie, funkcjonalność i autentyczne wzornictwo
               </Typography>
-              <DetailsButton text="Wybierz swój komplet"/>
+              <Slide direction="up" duration={1300}>
+                <DetailsButton text="Wybierz swój komplet"/>
+              </Slide>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <Carousel
               autoPlay={false}
               timeout={0}
               navButtonsAlwaysInvisible={true}
+              IndicatorIcon={<Image src={FirstStep} width={30} height={30}/>} // Previous Example
+              activeIndicatorIcomButtonProps={{
+                style: {
+                  width: '300px' // 2
+                }
+              }}
             >
               <Image src="/main/main.png" width={600} height={435} alt="" loading="eager" priority/>
               <Image src="/main/main2.png" width={600} height={435} alt="" loading="eager" priority/>
@@ -52,10 +67,12 @@ export default function MainOrder() {
                         loading="eager"
                       />
                     </Box>
-                    <Box className={classes.info}>
-                      <span>{topText}</span>
-                      <p>{bottomText}</p>
-                    </Box>
+                    <Slide direction="right" duration={1300}>
+                      <Box className={classes.info}>
+                        <span>{topText}</span>
+                        <p>{bottomText}</p>
+                      </Box>
+                    </Slide>
                   </Box>
                 </Grid>)
             }

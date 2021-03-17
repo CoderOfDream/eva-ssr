@@ -2,19 +2,19 @@ export const cards = [
   {
     src: "/main/calendar.png",
     alt: "calendar",
-    topText: "Гарантийный срок",
-    bottomText: "1 ГОД"
+    topText: "Okres gwarancji",
+    bottomText: "1 ROK"
   },
   {
     src: "/main/boxes.png",
     alt: "boxes",
-    topText: "Первый оффициальный",
-    bottomText: "Польский производитель"
+    topText: "Pierwszy oficjalny",
+    bottomText: "POLSKI PRODUCENT"
   },
   {
     src: "/main/rain.png",
     alt: "rain",
-    topText: "Магазины",
-    bottomText: "2 литра жидкости"
+    topText: "Przechowuje",
+    bottomText: "2 LITRY PŁYNU"
   }
 ]

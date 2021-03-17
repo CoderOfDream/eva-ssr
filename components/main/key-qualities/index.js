@@ -11,9 +11,9 @@ export default function KeyQualities() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="md">
       <Typography component="h2" className={classes.mainTitle}>
-        Key qualities
+        Kluczowe cechy
       </Typography>
       <Grid container spacing={3} justify="center">
         {

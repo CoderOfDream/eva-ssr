@@ -94,7 +94,7 @@ export default function ContactUs() {
               style={{background: "#990000"}}
               className={classes.submit}>
               Заказать коврик EVA
-            </Button>
+            </Button>    
           </form>
         </div>
       </Container>

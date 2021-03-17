@@ -4,9 +4,10 @@ export const useStyles = makeStyles((theme) => ({
   mainTitle: {
     color: "#0C0C0C",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "28px",
+    fontSize: "34px",
     fontWeight: 800,
     margin: "50px 0",
+    textShadow: "0px 0px 0px rgb(0 0 0 / 30%)",
     "@media (max-width: 900px)": {
       textAlign: "center"
     }

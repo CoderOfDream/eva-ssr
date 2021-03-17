@@ -5,18 +5,37 @@ import { red } from '@material-ui/core/colors';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: '#556cd6'
     },
     secondary: {
-      main: '#19857b',
+      main: '#19857b'
     },
     error: {
-      main: red.A400,
+      main: red.A400
     },
     background: {
-      default: '#fff',
-    },
+      default: '#fff'
+    }
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1050,
+      lg: 1280,
+      xl: 1920
+    }
+  },
+  overrides: {
+    MuiGrid: {
+      root: {
+        padding: "10px"
+      },
+      item: {
+        padding: "10px !important"
+      }
+    }
+  }
 });
 
 export default theme;

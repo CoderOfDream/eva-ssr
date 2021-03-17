@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "14px",
     fontWeight: 400,
-    margin: "50px 0 100px 0",
+    margin: "50px 0 50px 0",
     "@media (max-width: 900px)": {
       width: "100%"
     },

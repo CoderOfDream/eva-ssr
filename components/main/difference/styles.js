@@ -29,7 +29,13 @@ export const useStyles = makeStyles((theme) => ({
     transition: "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s",
     flexWrap: "nowrap",
     "@media (max-width: 900px)": {
-      flexWrap: "wrap",
+      flexWrap: "wrap"
     }
+  },
+  description: {
+    color: "#0c0c0c",
+    fontFamily: "Montserrat, Sans-serif",
+    fontWeight: 700,
+    fontSize: "20px"
   }
 }))

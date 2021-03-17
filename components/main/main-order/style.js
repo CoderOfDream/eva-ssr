@@ -7,10 +7,8 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "38px",
     fontWeight: 800,
     lineHeight: "40px",
-    width: "70%",
     "@media (max-width: 900px)": {
       textAlign: "center",
-      width: "100%",
     },
   },
   description: {
@@ -19,9 +17,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     fontWeight: 400,
     margin: "60px 0",
-    width: "55%",
     "@media (max-width: 900px)": {
-      width: "100%",
       textAlign: "center",
     },
   },
@@ -60,11 +56,14 @@ export const useStyles = makeStyles((theme) => ({
     padding: "10px",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
     flexDirection: "column",
     "& p": {
       margin: 0,
-      fontWeight: "bold"
+      fontWeight: "bold",
+      textAlign: "left",
+    },
+    "& span": {
+
     }
   },
   main: {

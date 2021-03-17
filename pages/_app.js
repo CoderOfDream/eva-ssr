@@ -35,12 +35,6 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <Header/>
-        {/*<NextNprogress*/}
-        {/*  color="#CE2B2B"*/}
-        {/*  startPosition={0.3}*/}
-        {/*  stopDelayMs={0}*/}
-        {/*  height="2"*/}
-        {/*/>*/}
         <NProgress
           color="#CE2B2B"
           options={{ trickleSpeed: 50 }}

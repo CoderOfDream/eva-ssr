@@ -11,7 +11,7 @@ export default function SpecificCar() {
 
   return (
     <section className={classes.section}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Box display="flex" justify="center" flexDirection="column" alignItems="center">
           <Typography component="h2" className={classes.mainTitle}>
             Wyprodukowane wyłącznie pod konkretne auto
