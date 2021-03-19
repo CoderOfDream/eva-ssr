@@ -5,9 +5,9 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Image from "next/image";
-import {Animated} from "react-animated-css";
+import { Animated } from "react-animated-css";
 
-export default function Warning() {
+export default function EcoPackage() {
   const classes = useStyles();
 
   return (
@@ -17,10 +17,10 @@ export default function Warning() {
           <Grid container item xs={12} sm={6} justify="center">
             <Box style={{ margin: "15px 0 0 0" }}>
               <Image
-                src="/main/warning.jpeg"
-                width={454}
-                height={340}
-                alt="Quality of Materials"
+                src="/main/EVAISECO.png"
+                width={239}
+                height={343}
+                alt="eco package"
               />
             </Box>
           </Grid>
@@ -28,17 +28,15 @@ export default function Warning() {
             <Box display="flex" alignItems="between" justify="space-around" flexDirection="column" height="100%">
               <Animated animationIn="fadeInRight" duration={1300} isVisible={true}>
                 <Typography component="h1" className={classes.mainTitle}>
-                  Uwaga! Uważaj na podróbki!
+                  Używamy tylko Ekologicznego Opakowania
                 </Typography>
               </Animated>
               <Typography component="p" className={classes.description}>
-                Kilka firm i osób prywatnych na platformach e-commerce (Allegro, OLX.pl, Ebay, Amazon) pozycjonujących
-                swoje produkty jako dywaniki z Octanu etylenowo-winylowego stosują tanie Chińskie materiały wykonane z
-                komponentów o niskiej jakości w celu obniżenia cen. Zakup od nich może skutkować skróceniem
-                oczekiwanej żywotności dywanika, a także odchyleniami pożądanych cech funkcjonalnych, a mianowicie
-                wytrzymałości, odporności na ścieranie i zdolności zatrzymywania, co z kolei może prowadzić do
-                gromadzenia się wody i brudu wewnątrz samochodu. W związku z tym zalecamy dokonanie zakupów tylko od
-                oficjalnych zaufanych producentów, którzy działają uczciwie i oferują Certyfikaty Gwarancji.
+                Firma EVA Dywaniki chce zmniejszyć wpływ swoich opakowań na środowisko i pomóc klientom w dokonywaniu
+                bardziej zrównoważonych wyborów. Opakowanie, które używamy do pakowania każdego zamówienia, a także
+                większość materiałów eksploatacyjnych wykorzystywanych podczas procesu produkcyjnego są recyklingowane
+                lub ekologiczne. Odzwierciedla to nasze wartości i wizję dotyczącą przyszłości, ponieważ dążenie do
+                bycia przyjaznymi środowisku jest najmniejsze co możemy zrobić dla naszej Planety.
               </Typography>
             </Box>
           </Grid>

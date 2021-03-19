@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
-// import NextNprogress from 'nextjs-progressbar';
+import "../src/styles.css"
 import NProgress from 'next-nprogress-emotion';
 
 
@@ -31,9 +31,13 @@ export default function MyApp(props) {
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline/>
         <Header/>
         <NProgress
           color="#CE2B2B"

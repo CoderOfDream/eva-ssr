@@ -56,7 +56,6 @@ export default function ContactUs() {
   return (
     <>
       <Container component="main" maxWidth="xs">
-        <CssBaseline/>
         <div className={classes.paper}>
           <Typography component="h1" variant="h5" className={classes.mainTitle}>
             Оставить заявку

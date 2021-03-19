@@ -7,6 +7,7 @@ import Box from "@material-ui/core/Box";
 import Image from "next/image";
 import DetailsButton from "../../details-button";
 import { Slide } from "react-awesome-reveal";
+import { Animated } from "react-animated-css";
 
 export default function MadeInPoland() {
   const classes = useStyles();
@@ -27,9 +28,9 @@ export default function MadeInPoland() {
                   jakość, nasz wewnętrzny zespół kontroli produktów sprawdza każdy dywanik pod kątem ewentualnych wad i
                   przeprowadza testy funkcjonalne przed dostawą.
                 </Typography>
-                <Slide duration={1300} direction="up">
+                <Animated animationIn="fadeInUp" duration={1300} isVisible={true}>
                   <DetailsButton text="Wybierz swój komplet"/>
-                </Slide>
+                </Animated>
               </Box>
             </Grid>
             <Grid container item xs={12} sm={5} display="flex" justify="center">

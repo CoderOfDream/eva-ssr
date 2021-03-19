@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Image from "next/image";
 import DetailsButton from "../../details-button";
-import { Slide } from "react-awesome-reveal";
+import { Animated } from "react-animated-css";
 
 export default function QualityOfMaterials() {
   const classes = useStyles();
@@ -25,9 +25,9 @@ export default function QualityOfMaterials() {
                   Nasze dywaniki produkujemy wyłącznie z materiałów najwyższej jakości, które przeszły pomyślnie testy
                   wytrzymałości i wydajności. W związku z tym można się spodziewać znakomitej całorocznej wydajności
                 </Typography>
-                <Slide duration={1300} direction="up">
+                <Animated animationIn="fadeInUp" duration={1300} isVisible={true}>
                   <DetailsButton text="Get to know more"/>
-                </Slide>
+                </Animated>
               </Box>
             </Grid>
             <Grid container item xs={12} sm={5} display="flex" justify="center">

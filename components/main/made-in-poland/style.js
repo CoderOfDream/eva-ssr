@@ -23,6 +23,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    marginTop: "121px"
+    marginTop: "121px",
+    backgroundAttachment: "fixed",
   }
 }))

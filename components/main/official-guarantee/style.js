@@ -1,29 +1,51 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-  button: {
-    marginTop: "81px"
+  mainInfo: {
+    display: "flex",
+    alignItems: "center",
+    color: "white",
+    margin: "30px 0 30px 0"
+  },
+  section: {
+    backgroundColor: "#000000",
+    backgroundImage: "url(./main/black-final-scaled.jpg)",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    marginTop: "100px",
+    backgroundAttachment: "fixed",
+    "@media (max-width: 900px)": {
+      marginTop: 0
+    }
   },
   mainTitle: {
-    color: "#262626",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "38px",
+    fontSize: "34px",
     fontWeight: 800,
-    marginTop: "43px",
+    color: "white",
+    lineHeight: "40px",
+    textAlign: "center",
     "@media (max-width: 900px)": {
-      textAlign: "center",
+      width: "100%",
+      marginTop: 0
     },
+    marginLeft: "10px"
+  },
+  container: {
+    backgroundImage: `url(./main/background.png)`,
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
   },
   description: {
-    color: "rgba(2, 1, 1, 0.86)",
+    color: "#C1C1C1",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "14px",
-    fontWeight: 400,
-    lineHeight: "1.8",
-    margin: "60px 0",
+    fontSize: "18px",
+    margin: "15px 0",
     "@media (max-width: 900px)": {
-      textAlign: "center",
-    },
+      width: "100%"
+    }
   },
   chooseKitButton: {
     padding: "20px 40px",
@@ -45,9 +67,9 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
   mainInfoContainer: {
-    display: "flex",
+    alignItems: "center",
     "&.img": {
-      padding: "20px"
+      // padding: "20px"
     },
     "@media (max-width: 900px)": {
       justifyContent: "center"
@@ -60,17 +82,11 @@ export const useStyles = makeStyles((theme) => ({
     padding: "10px",
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
     flexDirection: "column",
-    lineHeight: "22px",
-    margin: "12px -13px 0 0",
     "& p": {
       margin: 0,
-      fontWeight: "bold",
-      textAlign: "left",
-      fontSize: "14px",
-    },
-    "& span": {
-      fontSize: "14px",
+      fontWeight: "bold"
     }
   },
   main: {
@@ -78,13 +94,10 @@ export const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    marginTop: "96px",
-    backgroundAttachment: "fixed",
+    marginTop: "121px"
   },
-  descriptionWrapper: {
-    display: "flex",
-    width: "100%",
-    justifyContent: "center",
-    marginTop: "52px"
+  label: {
+    fontWeight: "ital",
+    color: "white",
   }
 }))
