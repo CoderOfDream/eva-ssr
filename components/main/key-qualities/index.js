@@ -1,9 +1,5 @@
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./styles";
-import Box from "@material-ui/core/Box";
 import Image from "next/image";
 import { cards } from "./cards";
 
@@ -11,16 +7,14 @@ export default function KeyQualities() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="md">
-      <Typography component="h2" className={classes.mainTitle}>
-        Kluczowe cechy
-      </Typography>
-      <Grid container spacing={3} justify="center">
+    <div className="container column">
+      <h2 className={`${classes.mainTitle} p-10`}>Kluczowe cechy</h2>
+      <div className="row">
         {
           cards.map(({ src, alt, topText, bottomText }, i) =>
-            <Grid item xs={12} sm={4} display="flex" key={i}>
-              <Box className={classes.mainInfoContainer} xs={12}>
-                <Box className={classes.image}>
+
+              <div className={classes.mainInfoContainer} key={i}>
+                <div className={classes.image}>
                   <Image
                     src={src}
                     width={230}
@@ -28,18 +22,18 @@ export default function KeyQualities() {
                     alt={alt}
                     loading="eager"
                   />
-                </Box>
-                <Box className={classes.info}>
+                </div>
+                <div className={classes.info}>
                   <h2>{topText}</h2>
                   <p>{bottomText}</p>
-                </Box>
-              </Box>
-            </Grid>)
+                </div>
+              </div>
+           )
         }
-      </Grid>
-      <div style={{ margin: "70px 0 70px 0" }}>
-        <Grid container spacing={3}>
-          <Grid container item xs={12} sm={5} display="flex" justify="center">
+      </div>
+      <div style={{ margin: "47px 0 70px 0" }} className="p-10">
+        <div className="row">
+          <div className="md4 ">
             <Image
               src="/main/mesh.jpg"
               width={408}
@@ -47,9 +41,9 @@ export default function KeyQualities() {
               alt="mesh"
               loading="eager"
             />
-          </Grid>
-          <Grid item xs={12} sm={7} className={classes.rombContainer}>
-            <Box className={classes.rombsImg}>
+          </div>
+          <div className={`${classes.rombContainer} md6`}>
+            <div className={classes.rombsImg}>
               <Image
                 src="/main/rombs.png"
                 width={70}
@@ -57,17 +51,15 @@ export default function KeyQualities() {
                 alt="rombs"
                 loading="eager"
               />
-            </Box>
-            <Typography component="h2" className={classes.meshDescriptionTitle}>
-              Unikalny kształt komórek wewnątrz dywaników
-            </Typography>
+            </div>
+            <h2 className={classes.meshDescriptionTitle}>Unikalny kształt komórek wewnątrz dywaników</h2>
             <p>
               Komórki o kształtach Rombu oraz Plastra Miodu umożliwiają bezpieczne utrzymywanie do 2 litrów płynów i
               brudu
             </p>
-          </Grid>
-        </Grid>
+          </div>
+        </div>
       </div>
-    </Container>
+    </div>
   )
 }

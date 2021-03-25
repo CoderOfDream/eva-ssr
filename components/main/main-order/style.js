@@ -1,8 +1,23 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  item: {
+    marginTop: 12
+  },
   button: {
-    marginTop: "81px"
+    marginTop: "59px",
+    "@media (max-width: 900px)": {
+      margin: 0,
+      padding: "20px 30px",
+      fontSize: "18px !important"
+    },
+    "& button": {
+      "@media (max-width: 900px)": {
+        margin: 0,
+        padding: "20px 30px",
+        fontSize: "18px !important"
+      }
+    }
   },
   mainTitle: {
     color: "#262626",
@@ -12,7 +27,8 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: "43px",
     "@media (max-width: 900px)": {
       textAlign: "center",
-    },
+      fontSize: "26px"
+    }
   },
   description: {
     color: "rgba(2, 1, 1, 0.86)",
@@ -20,10 +36,13 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     fontWeight: 400,
     lineHeight: "1.8",
-    margin: "60px 0",
+    margin: "40px 0",
     "@media (max-width: 900px)": {
       textAlign: "center",
-    },
+      fontSize: "12px",
+      margin: "5px auto",
+      width: "240px"
+    }
   },
   chooseKitButton: {
     padding: "20px 40px",
@@ -51,10 +70,28 @@ export const useStyles = makeStyles((theme) => ({
     },
     "@media (max-width: 900px)": {
       justifyContent: "center"
+    },
+    "&:nth-child(1)": {
+      marginLeft: "67px",
+      "@media (max-width: 900px)": {
+        marginLeft: 1
+      }
+    },
+    "&:nth-child(2)": {
+      marginLeft: "120px",
+      "@media (max-width: 900px)": {
+        marginLeft: 1
+      }
+    },
+    "&:nth-child(3)": {
+      marginLeft: "68px",
+      "@media (max-width: 900px)": {
+        marginLeft: 1
+      }
     }
   },
   image: {
-    padding: "10px"
+    padding: "10px 12px 10px 10px"
   },
   info: {
     padding: "10px",
@@ -62,15 +99,15 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     lineHeight: "22px",
-    margin: "12px -13px 0 0",
+    margin: "-6px -13px 0 0",
     "& p": {
       margin: 0,
       fontWeight: "bold",
       textAlign: "left",
-      fontSize: "14px",
+      fontSize: "14px"
     },
     "& span": {
-      fontSize: "14px",
+      fontSize: "14px"
     }
   },
   main: {
@@ -80,11 +117,17 @@ export const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     marginTop: "96px",
     backgroundAttachment: "fixed",
+    "@media (max-width: 900px)": {
+      marginTop: 40
+    }
   },
   descriptionWrapper: {
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    marginTop: "52px"
+    marginTop: "52px",
+    "@media (max-width: 900px)": {
+      marginTop: 0
+    }
   }
 }))

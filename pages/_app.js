@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CacheProvider } from '@emotion/react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
-import "../src/styles.css"
+import "../src/styles.sass"
 import NProgress from 'next-nprogress-emotion';
-
-
 import theme from '../src/theme';
 import Header from "../components/header";
 

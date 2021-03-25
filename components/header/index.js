@@ -1,23 +1,68 @@
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  IconButton,
-  Drawer,
-  MenuItem
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
 
 import { useStyles } from "./styles";
 import Image from 'next/image'
-import Container from "@material-ui/core/Container";
 import { useRouter } from 'next/router'
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
+import Link from "next/link";
+import { slide as Menu } from 'react-burger-menu'
+
+const styles = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '25px',
+    height: '20px',
+    right: '12px',
+    top: '20px'
+  },
+  bmBurgerBars: {
+    background: 'red',
+    height: "2px"
+  },
+  bmBurgerBarsHover: {
+    background: '#a90000'
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px'
+  },
+  bmCross: {
+    background: '#bdc3c7'
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%',
+    top: 0
+  },
+  bmMenu: {
+    background: 'black',
+    padding: '2.5em 1.5em 0',
+    fontSize: '1.15em'
+  },
+  bmMorphShape: {
+    fill: '#373a47'
+  },
+  bmItemList: {
+    color: '#b8b7ad',
+    padding: '0.8em',
+    display: "flex",
+    flexDirection: "column"
+  },
+  bmItem: {
+    display: "flex",
+    alignSelf: "flex-end",
+    textDecoration: "none",
+    padding: "13px 0 13px 20px",
+    outline: "none",
+    color: "#d1d1d1",
+    transition: "color 0.2s",
+  },
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+}
 
 export default function Header() {
-  const { header, menuButton, toolbar, drawerContainer, orderButton } = useStyles();
+  const { header, menuButton, toolbar, orderButton, nav, a } = useStyles();
 
   const [state, setState] = useState({
     mobileView: false,
@@ -47,10 +92,10 @@ export default function Header() {
     }
   ]);
 
-  const { mobileView, drawerOpen } = state;
+  const { mobileView } = state;
   const router = useRouter()
 
-
+  // Todo - Remove later
   useEffect(() => {
     const setResponsiveness = () => {
       return window.innerWidth < 900
@@ -66,66 +111,43 @@ export default function Header() {
 
   const displayDesktop = () => {
     return (
-      <Toolbar className={toolbar}>
-        {headerLogo}
-        <Button className={orderButton}>Złóż zamówienie</Button>
-        <Box container display="flex" alignItems="center" justify="center" height="100%">{getMenuButtons()}</Box>
-      </Toolbar>
+      <div className={toolbar}>
+        {headerLogo(127, 44)}
+        <div className="wrapper">
+          <button className={orderButton}>Złóż zamówienie</button>
+        </div>
+        <div className="wrapper">
+          <nav className={nav}>{getMenuButtons()}</nav>
+        </div>
+      </div>
     );
   };
 
   const displayMobile = () => {
-    const handleDrawerOpen = () => {
-      setState((prevState) => ({ ...prevState, drawerOpen: true }));
-    }
-    const handleDrawerClose = () => {
-      setState((prevState) => ({ ...prevState, drawerOpen: false }));
-    }
-
     return (
-      <Toolbar>
-        <div style={{ flex: 1 }}>{headerLogo}</div>
-        <IconButton
-          {...{
-            edge: "start",
-            color: "inherit",
-            "aria-label": "menu",
-            "aria-haspёopup": "true",
-            onClick: handleDrawerOpen
-          }}
-        >
-          <MenuIcon/>
-        </IconButton>
-        <Drawer
-          {...{
-            anchor: "right",
-            open: drawerOpen,
-            onClose: handleDrawerClose
-          }}
-        >
-          <div className={drawerContainer}>{getDrawerChoices(handleDrawerClose)}</div>
-        </Drawer>
-      </Toolbar>
+      <>
+        <div>
+          {headerLogo(95, 32)}
+        </div>
+        <Menu styles={styles} right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
+          {
+            headersData.map(({ label, href }, i) =>
+              <Link
+                key={i}
+                href={href}>
+                <a className="menu-item">{label}</a>
+              </Link>
+            )
+          }
+        </Menu>
+      </>
     );
   };
 
-  const getDrawerChoices = (handleDrawerClose) => {
-    return headersData.map(({ label, href }) => {
-      return (
-        <Grid container display="flex" justify="center">
-          <Button key={label} onClick={() => {
-            handleDrawerClose();
-            router.push(href)
-          }}>
-            <MenuItem>{label}</MenuItem>
-          </Button>
-        </Grid>
-      );
-    });
-  };
-
-  const headerLogo = (
-    <Image src="/header/logo.png" width={127} height={44} alt="logo" priority loading="eager"/>
+  const headerLogo = (width, height) => (
+    <div className="p-10">
+      <Image src="/header/logo.png" width={width} height={height} alt="logo" priority loading="eager"/>
+    </div>
   );
 
   useEffect(() => {
@@ -144,25 +166,27 @@ export default function Header() {
       })));
     }
     return headersData.map(({ label, href, isActive }) => (
-      <Button
+      <Link
+        className={a}
         onClick={() => clickDesktopButton(label, href)}
-        {...{
-          key: label,
-          color: "inherit",
-          to: href,
-          className: isActive ? `${menuButton} ${menuButton}-active` : menuButton
-        }}
+        href={href}
+        key={label}
       >
-        {label}
-      </Button>
+        <a className={isActive ? `${menuButton} ${menuButton}-active` : menuButton}>{label}</a>
+      </Link>
     ));
   };
 
   return (
-    <AppBar className={header}>
-      <Container maxWidth="md">
+    <div className={header}>
+      <div className="container" id="outer-container">
         {mobileView ? displayMobile() : displayDesktop()}
-      </Container>
-    </AppBar>
+      </div>
+      <style jsx>{`
+      .menu-item {
+      text-decoration: none
+      }
+      `}</style>
+    </div>
   );
 }

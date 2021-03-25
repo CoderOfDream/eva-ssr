@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "34px",
     fontWeight: 800,
-    margin: "50px 0",
+    margin: "81px 0 18px 0",
     textShadow: "0px 0px 0px rgb(0 0 0 / 30%)",
     "@media (max-width: 900px)": {
       textAlign: "center"
@@ -15,6 +15,12 @@ export const useStyles = makeStyles((theme) => ({
   rombContainer: {
     "@media (max-width: 900px)": {
       flexDirection: "column-reverse"
+    },
+    "& p": {
+      padding: "3px 0 0 17px",
+      fontSize: "14px",
+      lineHeight: "1.4",
+      margin: 0
     }
   },
   rombsImg: {
@@ -25,6 +31,7 @@ export const useStyles = makeStyles((theme) => ({
   meshDescriptionTitle: {
     fontWeight: "bold",
     fontFamily: "Montserrat, Sans-serif",
+    margin: 18,
     fontSize: "28px"
   },
   mainInfoContainer: {
@@ -38,13 +45,12 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
   image: {
-    margin: "0 auto"
+    margin: "10px auto 8px auto"
   },
   info: {
     padding: "10px",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
     flexDirection: "column",
     "& h2": {
       fontFamily: "Montserrat, Sans-serif",
@@ -57,7 +63,8 @@ export const useStyles = makeStyles((theme) => ({
     "& p": {
       fontWeight: 400,
       fontSize: "14px",
-      color: "#3F3F3F"
+      color: "#3F3F3F",
+      lineHeight: "1.7"
     }
   },
   main: {

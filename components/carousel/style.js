@@ -8,5 +8,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   nav: {
     marginLeft: "234px",
+    "@media (max-width: 900px)": {
+      margin: "0 auto",
+    },
   }
 }))

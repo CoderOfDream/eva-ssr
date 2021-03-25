@@ -10,7 +10,6 @@ export default function Carousel() {
   const classes = useStyles();
 
   const [step, setStep] = useState(0);
-  console.log(step)
   return (
     <div className={classes.wrapper}>
       {
