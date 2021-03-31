@@ -1,6 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  wrap: {
+    "@media (max-width: 900px)": {
+      flexDirection: "column-reverse",
+    }
+  },
+  contentContainer: {
+    display: "flex",
+    "@media (max-width: 900px)": {
+      flexDirection: "column"
+    }
+  },
   mainTitle: {
     color: "#0C0C0C",
     fontFamily: "Montserrat, Sans-serif",
@@ -9,21 +20,28 @@ export const useStyles = makeStyles((theme) => ({
     margin: "81px 0 18px 0",
     textShadow: "0px 0px 0px rgb(0 0 0 / 30%)",
     "@media (max-width: 900px)": {
-      textAlign: "center"
+      textAlign: "center",
+      fontSize: "26px",
     }
   },
   rombContainer: {
     "@media (max-width: 900px)": {
-      flexDirection: "column-reverse"
+      flexDirection: "column-reverse",
     },
     "& p": {
       padding: "3px 0 0 17px",
       fontSize: "14px",
       lineHeight: "1.4",
-      margin: 0
-    }
+      margin: 0,
+      "@media (max-width: 900px)": {
+        margin: "20px",
+        textAlign: "center"
+      },
+    },
+    
   },
   rombsImg: {
+    marginLeft: "16px",
     "@media (max-width: 900px)": {
       display: "none"
     }
@@ -32,7 +50,11 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     fontFamily: "Montserrat, Sans-serif",
     margin: 18,
-    fontSize: "28px"
+    fontSize: "28px",
+    "@media (max-width: 900px)": {
+      textAlign: "center",
+      fontSize: "26px"
+    }
   },
   mainInfoContainer: {
     display: "flex",
@@ -41,14 +63,19 @@ export const useStyles = makeStyles((theme) => ({
       padding: "20px"
     },
     "@media (max-width: 900px)": {
-      justifyContent: "center"
+      justifyContent: "center",
+      flexDirection: "initial"
     }
   },
   image: {
-    margin: "10px auto 8px auto"
+    margin: "10px auto 8px auto",
+    "@media (max-width: 900px)": {
+      minWidth: "45%"
+    }
   },
   info: {
     padding: "10px",
+    paddingLeft: "0",
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",

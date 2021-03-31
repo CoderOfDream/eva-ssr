@@ -15,14 +15,14 @@ export default function MainPage() {
     <>
       <MainOrder/>
       <KeyQualities/>
-      {/*<Difference />*/}
-      {/*<Comparison />*/}
-      {/*<QualityOfMaterials />*/}
-      {/*<SpecificCar />*/}
-      {/*<MadeInPoland />*/}
-      {/*<Warning />*/}
-      {/*<OfficialGuarantee />*/}
-      {/*<EcoPackage />*/}
+      <Difference />
+      <Comparison />
+      <QualityOfMaterials />
+      <SpecificCar />
+      <MadeInPoland />
+      <Warning />
+      <OfficialGuarantee />
+      <EcoPackage />
     </>
   )
 }

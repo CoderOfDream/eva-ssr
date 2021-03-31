@@ -9,11 +9,10 @@ export default function KeyQualities() {
   return (
     <div className="container column">
       <h2 className={`${classes.mainTitle} p-10`}>Kluczowe cechy</h2>
-      <div className="row">
+      <div className={classes.contentContainer}>
         {
           cards.map(({ src, alt, topText, bottomText }, i) =>
-
-              <div className={classes.mainInfoContainer} key={i}>
+              <div className={`${classes.mainInfoContainer}`} key={i}>
                 <div className={classes.image}>
                   <Image
                     src={src}
@@ -32,7 +31,7 @@ export default function KeyQualities() {
         }
       </div>
       <div style={{ margin: "47px 0 70px 0" }} className="p-10">
-        <div className="row">
+        <div className={`${classes.wrap} row`}>
           <div className="md4 ">
             <Image
               src="/main/mesh.jpg"

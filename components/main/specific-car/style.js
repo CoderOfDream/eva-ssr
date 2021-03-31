@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   section: {
-    marginTop: "100px",
+    marginTop: "35px",
     "@media (max-width: 900px)": {
       marginTop: 0
     },
@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
   mainTitle: {
     color: "black",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "32px",
+    fontSize: "34px",
     fontWeight: 800,
     lineHeight: "40px",
     textAlign: "center",
@@ -30,6 +30,9 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "14px",
     margin: "15px 0",
+    padding: "10px",
+    lineHeight: "1.6",
+    textAlign: "center",
     "@media (max-width: 900px)": {
       width: "100%"
     },
@@ -62,7 +65,7 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
   image: {
-    padding: "10px"
+    // padding: "10px"
   },
   info: {
     padding: "10px",

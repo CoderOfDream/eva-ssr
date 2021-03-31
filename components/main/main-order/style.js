@@ -1,8 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(() => ({
   item: {
-    marginTop: 12
+    marginTop: 12,
+    "@media (max-width: 900px)": {
+      marginLeft: 56,
+    },
   },
   button: {
     marginTop: "59px",

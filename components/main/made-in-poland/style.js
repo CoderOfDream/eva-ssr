@@ -2,9 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   mainTitle: {
-    color: "#262626",
+    color: "#0c0c0c",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "38px",
+    fontSize: "34px",
     fontWeight: 800,
     lineHeight: "40px"
   },
@@ -12,8 +12,9 @@ export const useStyles = makeStyles((theme) => ({
     color: "rgba(2, 1, 1, 0.86)",
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "14px",
+    lineHeight: "1.8",
     fontWeight: 400,
-    margin: "50px 0 50px 0",
+    margin: "40px 0 40px 0",
     "@media (max-width: 900px)": {
       width: "100%"
     },

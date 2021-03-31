@@ -26,7 +26,7 @@ export default function OfficialGuarantee() {
               dywaników.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} className={classes.mainInfoContainerWrapper}>
             {
               cards.map(({ src, label }, i) =>
                 <Box className={classes.mainInfoContainer} xs={12} display="flex" key={i}>

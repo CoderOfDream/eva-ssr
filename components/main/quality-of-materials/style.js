@@ -4,16 +4,18 @@ export const useStyles = makeStyles((theme) => ({
   mainTitle: {
     color: "#262626",
     fontFamily: "Montserrat, Sans-serif",
-    fontSize: "38px",
+    fontSize: "34px",
     fontWeight: 800,
-    lineHeight: "40px"
+    lineHeight: "40px",
+    marginTop: "40px"
   },
   description: {
     color: "rgba(2, 1, 1, 0.86)",
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "14px",
     fontWeight: 400,
-    margin: "50px 0 100px 0",
+    margin: "73px 0 93px 0",
+    lineHeight: "1.8",
     "@media (max-width: 900px)": {
       width: "100%"
     },

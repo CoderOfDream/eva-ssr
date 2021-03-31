@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  mainInfoContainerWrapper: {
+
+  },
   mainInfo: {
     display: "flex",
     alignItems: "center",
@@ -13,7 +16,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    marginTop: "100px",
+    marginTop: "122px",
     backgroundAttachment: "fixed",
     "@media (max-width: 900px)": {
       marginTop: 0
@@ -68,12 +71,19 @@ export const useStyles = makeStyles((theme) => ({
   },
   mainInfoContainer: {
     alignItems: "center",
+    // minHeight: "102px",
     "&.img": {
       // padding: "20px"
     },
     "@media (max-width: 900px)": {
       justifyContent: "center"
-    }
+    },
+    "&:nth-child(1)": {
+      marginTop: "17px"
+    },
+    "&:nth-child(4)": {
+      marginTop: "-10px"
+    },
   },
   image: {
     padding: "10px"
@@ -98,6 +108,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   label: {
     fontWeight: "ital",
+    padding: "10px",
     color: "white",
   }
 }))

@@ -1,67 +1,67 @@
 export const cards = [
   [{
     src: "/main/regular/1.png",
-    text: "Spread dirt across the car cabin"
+    text: "Rozprzestrzeniają brud we wnętrzu kabiny samochodowej"
   },
   {
     src: "/main/eva/1.png",
-    text: "Collect and store dirt inside the cells"
+    text: "Zbierają i przechowują kawałki brudu wewnątrz komórek"
   }],
   [{
     src: "/main/regular/2.png",
-    text: "Heavy, hard to clean up"
+    text: "Ciężkie, trudne w czyszczeniu"
   },
   {
     src: "/main/eva/2.png",
-    text: "Up to 5 times lighter, easy to clean up"
+    text: "5 razy lżejsze niż standardowe dywaniki, łatwe do posprzątania i wytrzepania"
   }],
   [{
     src: "/main/regular/3.png",
-    text: "Move across the car cabin, get in a wrong position"
+    text: "Złe mocowanie i dopasowanie przez co przeszkadzając przemieszczają się po wnętrzu samochodu"
   },
   {
     src: "/main/eva/3.png",
-    text: "Are perfectly fixed with original fasteners and velcro straps"
+    text: "Doskonale mocowane za pomocą oryginalnych zapięć i pasków na rzepy"
   }],
   [{
     src: "/main/regular/4.png",
-    text: "Wear out fast, shortly lose their original look"
+    text: "Szybko się zużywają i tracą swój pierwotny wygląd"
   },
   {
     src: "/main/eva/4.png",
-    text: "Are durable, keep their visual appearance good for a long time"
+    text: "Są trwałe, zachowują pierwotny wygląd przez długi czas"
   }],
   [{
     src: "/main/regular/5.png",
-    text: "Size and fit are far from perfect"
+    text: "Rozmiar i dopasowanie są dalekie od ideału"
   },
   {
     src: "/main/eva/5.png",
-    text: "Tailor-made for your car, fit perfectly"
+    text: "Szyte na miarę i idealnie dopasowane do Twojego samochodu"
   }],
   [{
     src: "/main/regular/6.png",
-    text: "Look identically, little to no customization options"
+    text: "Wyglądają identycznie, mało lub brak możliwości personalizacji"
   },
   {
     src: "/main/eva/6.png",
-    text: "Possibility to choose and build your own design from a variety of color combinations"
+    text: "Możliwość wyboru i zbudowania własnego wyglądu z różnych kombinacji kolorystycznych"
   }],
   [{
     src: "/main/regular/7.png",
-    text: "Right foot slips while driving in wet shoes, the mat is usually worn out to holes in heel area"
+    text: "Prawa stopa może ześlizgnąć się podczas jazdy gdy podeszwa buta jest mokra, powstają dziury w okolicach pięty"
   },
   {
     src: "/main/eva/7.png",
-    text: "Anti-slippery heel plate on driver's mat always keeps the foot stable and protects the mat from wearing out"
+    text: "Antypoślizgowa podkładka pod piętą na dywaniku kierowcy zawsze utrzymuje stabilność stopy i chroni dywanik przed zużyciem"
   }],
   [{
     src: "/main/regular/8.png",
-    text: "Change their physical conditions with temperature swings właściwości fizykochemiczne przez wahania temperatury"
+    text: "Zmieniają swój wygląd oraz właściwości fizykochemiczne przez wahania temperatury"
   },
   {
     src: "/main/eva/8.png",
-    text: "Are resistant to temperature swings"
+    text: "Są odporne na wahania temperatury"
   }],
 ];
 

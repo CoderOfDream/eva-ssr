@@ -9,23 +9,26 @@ import {Animated} from "react-animated-css";
 
 export default function Warning() {
   const classes = useStyles();
-
+  const {wrapper} = useStyles();
   return (
     <>
-      <Container maxWidth="md">
-        <Grid container spacing={3}>
-          <Grid container item xs={12} sm={6} justify="center">
-            <Box style={{ margin: "15px 0 0 0" }}>
+      <div className="container" style={{marginTop: "121px"}}>
+        <Box className={wrapper} spacing={3}>
+          <Box justify="flex-start"
+                style={{justifyContent: "flex-start", padding: "10px 0 0 0 10px"}}
+          >
+            <Box style={{ padding: "36px 0 0 10px", minWidth: "454px", justifyContent: "flex-start" }}>
               <Image
                 src="/main/warning.jpeg"
                 width={454}
                 height={340}
                 alt="Quality of Materials"
+                className="kk-image"
               />
             </Box>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box display="flex" alignItems="between" justify="space-around" flexDirection="column" height="100%">
+          </Box>
+          <div>
+            <Box style={{padding: "23px 0 0 28px"}} display="flex" alignItems="between" justify="space-around" flexDirection="column" height="100%">
               <Animated animationIn="fadeInRight" duration={1300} isVisible={true}>
                 <Typography component="h1" className={classes.mainTitle}>
                   Uwaga! Uważaj na podróbki!
@@ -41,9 +44,14 @@ export default function Warning() {
                 oficjalnych zaufanych producentów, którzy działają uczciwie i oferują Certyfikaty Gwarancji.
               </Typography>
             </Box>
-          </Grid>
-        </Grid>
-      </Container>
+          </div>
+        </Box>
+      </div>
+      {/*<style jsx global>{`*/}
+      {/*.kk-image {*/}
+      {/*  width: 400px*/}
+      {/*}*/}
+      {/*`}</style>*/}
     </>
   )
 }

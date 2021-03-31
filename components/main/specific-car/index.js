@@ -10,7 +10,7 @@ export default function SpecificCar() {
   const classes = useStyles();
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} >
       <Container maxWidth="md">
         <Box display="flex" justify="center" flexDirection="column" alignItems="center">
           <Typography component="h2" className={classes.mainTitle}>
@@ -26,7 +26,7 @@ export default function SpecificCar() {
             chronionych przez oryginalne dywaniki od producenta samochodu.
           </Typography>
         </Box>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} style={{marginTop: "-23px"}}>
           {
             ["/main/specific-car1.jpg", "/main/specific-car2.jpg", "/main/specific-car3.jpg"].map((src, i) =>
               <Grid container item xs={12} sm={4} display="flex" justify="center" key={i}>

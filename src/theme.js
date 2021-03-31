@@ -21,12 +21,18 @@ const theme = createMuiTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 1050,
+      md: 1098,
       lg: 1280,
       xl: 1920
     }
   },
   overrides: {
+    MuiContainer: {
+      disableGutters: true,
+      root: {
+        padding: 0
+      }
+    },
     MuiGrid: {
       root: {
         padding: "10px"

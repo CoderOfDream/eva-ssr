@@ -11,6 +11,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     textAlign: "center",
+    marginBottom: "0",
     "@media (max-width: 900px)": {
       marginTop: 0
     }
@@ -22,14 +23,18 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: "33%",
     "& p": {
-      padding: "20px 0"
+      padding: "8px 0"
     }
   },
   container: {
     marginTop: "100px",
   },
   containerGrid: {
+    display: "flex",
+    maxWidth: "1140px",
+    margin: "120px auto 0 auto",
     "@media (max-width: 900px)": {
       display: "block"
     }
@@ -45,8 +50,12 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
   hideCompare: {
+    width: "33%",
     "@media (max-width: 900px)": {
       display: "none"
     }
+  },
+  wrapper: {
+    width: "33%"
   }
 }))
