@@ -25,6 +25,7 @@
     "react-compare-image": "^3.1.0",
     "react-dom": "^17.0.1",
     "react-phone-input-2": "^2.13.9",
+    "react-smooth-scrolling": "^1.0.2",
     "sass": "^1.32.8"
   },
   "engines": {

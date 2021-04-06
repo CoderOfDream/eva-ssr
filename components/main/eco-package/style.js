@@ -21,6 +21,9 @@ export const useStyles = makeStyles((theme) => ({
       width: "100%"
     },
   },
+  wrapper: {
+    marginLeft: "38px"
+  },
   main: {
     backgroundImage: `url(./main/background.png)`,
     backgroundPosition: "center center",

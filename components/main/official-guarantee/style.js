@@ -1,14 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-  mainInfoContainerWrapper: {
-
-  },
   mainInfo: {
     display: "flex",
-    alignItems: "center",
     color: "white",
-    margin: "30px 0 30px 0"
+    margin: "39px 0 20px 1px"
   },
   section: {
     backgroundColor: "#000000",
@@ -33,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
       width: "100%",
       marginTop: 0
     },
-    marginLeft: "10px"
+    margin: "10px 0 0 16px",
   },
   container: {
     backgroundImage: `url(./main/background.png)`,
@@ -45,7 +41,9 @@ export const useStyles = makeStyles((theme) => ({
     color: "#C1C1C1",
     fontFamily: "Montserrat, Sans-serif",
     fontSize: "18px",
+    padding: "8px",
     margin: "15px 0",
+    lineHeight: "1.7",
     "@media (max-width: 900px)": {
       width: "100%"
     }

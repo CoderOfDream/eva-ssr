@@ -26,7 +26,7 @@ export default function QualityOfMaterials() {
                   wytrzymałości i wydajności. W związku z tym można się spodziewać znakomitej całorocznej wydajności
                 </Typography>
                 <Animated animationIn="fadeInUp" duration={1300} isVisible={true}>
-                  <DetailsButton text="Get to know more"/>
+                  <DetailsButton text="Dowiedz się więcej"/>
                 </Animated>
               </Box>
             </Grid>

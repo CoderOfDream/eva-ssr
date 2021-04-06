@@ -57,13 +57,14 @@ import {Animated} from "react-animated-css";
 
 export default function QualityOfMaterials() {
     const classes = useStyles();
+    const {wrapper} = classes;
 
     return (
         <>
             <section style={{margin: "100px 0 60px 0"}} className={classes.main}>
                 <Container maxWidth="md" style={{marginTop: "128px"}}>
                     <Grid container spacing={3}>
-                        <Grid container item xs={12} sm={5} display="flex" justify="center">
+                        <Grid container item xs={12} sm={5} display="flex" justify="center" style={{paddingTop: "0 !important"}}>
                             <Box style={{marginLeft: "43px"}}>
                                 <Image
                                     src="/main/EVAISECO.png"
@@ -74,7 +75,7 @@ export default function QualityOfMaterials() {
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={7}>
-                            <Box display="flex" alignItems="between" justify="space-around" flexDirection="column"
+                            <Box className={wrapper} display="flex" alignItems="between" justify="space-around" flexDirection="column"
                                  height="100%">
                                 <Typography component="h1" className={classes.mainTitle}>
                                     Używamy tylko Ekologicznego Opakowania
